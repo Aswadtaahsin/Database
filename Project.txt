@@ -1,10 +1,10 @@
-19:39:24	SELECT DATABASE(project)
-19:39:24	show databases
-19:39:02	show databases
-19:38:29	show databases
-19:38:14	show database
-19:36:23	UPDATE `project`.`course` SET `C_ID` = '456' WHERE (`C_Student_id` = '321')
-19:35:46	ALTER TABLE `project`.`students` 
+	SELECT DATABASE(project)
+	show databases
+ show databases
+	show databases
+	show database
+	UPDATE `project`.`course` SET `C_ID` = '456' WHERE (`C_Student_id` = '321')
+	ALTER TABLE `project`.`students` 
  CHANGE COLUMN `college_id` `college_id` VARCHAR(45) NOT NULL ,
  CHANGE COLUMN `name` `name` VARCHAR(45) NOT NULL ,
  CHANGE COLUMN `mobile` `mobile` VARCHAR(45) NOT NULL ,
@@ -12,7 +12,7 @@
  CHANGE COLUMN `username` `username` VARCHAR(45) NOT NULL ,
  CHANGE COLUMN `password` `password` VARCHAR(45) NOT NULL ,
  CHANGE COLUMN `address` `address` VARCHAR(45) NOT NULL
-19:23:09	CREATE TABLE `project`.`classes` (
+	CREATE TABLE `project`.`classes` (
    `cl_id` INT NOT NULL,
    `student_id` VARCHAR(45) NOT NULL,
    `room` VARCHAR(45) NOT NULL,
@@ -20,7 +20,7 @@
    `description` VARCHAR(45) NOT NULL,
    `name` VARCHAR(45) NOT NULL,
    PRIMARY KEY (`cl_id`))
-19:20:46	CREATE TABLE `project`.`students` (
+	CREATE TABLE `project`.`students` (
    `ST_id` INT NOT NULL,
    `college_id` VARCHAR(45) NULL,
    `name` VARCHAR(45) NULL,
@@ -30,16 +30,16 @@
    `password` VARCHAR(45) NULL,
    `address` VARCHAR(45) NULL,
    PRIMARY KEY (`ST_id`))
-19:19:45	CREATE TABLE `project`.`schools` (
+	CREATE TABLE `project`.`schools` (
    `s_id` INT NOT NULL,
    `name` VARCHAR(45) NULL,
    `type` VARCHAR(45) NULL,
    `description` VARCHAR(45) NULL,
    PRIMARY KEY (`s_id`))
-19:18:59	ALTER TABLE `project`.`registration` 
+	ALTER TABLE `project`.`registration` 
  CHANGE COLUMN `Registrationcol` `Registration` VARCHAR(45) NOT NULL
-19:18:36	SELECT * FROM project.registration
-19:18:20	CREATE TABLE `project`.`registration` (
+	SELECT * FROM project.registration
+	CREATE TABLE `project`.`registration` (
    `R_id` INT NOT NULL,
    `R_Student_id` VARCHAR(45) NOT NULL,
    `R_course id` VARCHAR(45) NOT NULL,
@@ -50,42 +50,42 @@
    `Description` VARCHAR(45) NOT NULL,
    `Registrationcol` VARCHAR(45) NOT NULL,
    PRIMARY KEY (`R_id`))
-19:16:21	CREATE TABLE `project`.`have` (
+	CREATE TABLE `project`.`have` (
    `s_id` INT NOT NULL,
    `r_id` VARCHAR(45) NOT NULL,
    `t_id` VARCHAR(45) NOT NULL,
    `c_id` VARCHAR(45) NOT NULL,
    PRIMARY KEY (`s_id`, `r_id`, `t_id`, `c_id`))
-19:15:37	CREATE TABLE `project`.`teaches` (
+	CREATE TABLE `project`.`teaches` (
    `t_id` INT NOT NULL,
    `C_ID` VARCHAR(45) NOT NULL,
    `s_id` VARCHAR(45) NOT NULL,
    PRIMARY KEY (`t_id`, `C_ID`, `s_id`))
-19:14:06	CREATE TABLE `project`.`manage` (
+	CREATE TABLE `project`.`manage` (
    `T_ID` INT NOT NULL,
    `CI_ID` INT NOT NULL,
    `S_ID` INT NOT NULL,
    PRIMARY KEY (`T_ID`, `CI_ID`, `S_ID`))
-19:12:53	UPDATE `project`.`course` SET `C_ID` = '456' WHERE (`C_Student_id` = '321')
-19:12:47	SELECT * FROM project.course
-19:12:32	SELECT * FROM project.course
-19:12:29	ALTER TABLE `project`.`course` 
+	UPDATE `project`.`course` SET `C_ID` = '456' WHERE (`C_Student_id` = '321')
+	SELECT * FROM project.course
+	SELECT * FROM project.course
+	ALTER TABLE `project`.`course` 
  DROP PRIMARY KEY,
  ADD PRIMARY KEY (`C_Student_id`)
-19:12:07	INSERT INTO `project`.`course` (`C_ID`, `C_Student_id`, `registration`, `name`, `type`, `YEAR`, `description`) VALUES ('123', '987', 'yes', 'jack', '6 month', '0', 'N/A')
-19:12:07	INSERT INTO `project`.`course` (`C_ID`, `C_Student_id`, `registration`, `name`, `type`, `YEAR`, `description`) VALUES ('456', '654', 'yes', 'bob', '6 month', '0', 'has not paid fees')
-19:12:07	INSERT INTO `project`.`course` (`C_ID`, `C_Student_id`, `registration`, `name`, `type`, `YEAR`, `description`) VALUES ('789', '321', 'yes', 'mark', '12 month', '1', 'N/A')
-19:10:42	INSERT INTO `project`.`course` (`C_ID`, `C_Student_id`, `registration`, `name`, `type`, `YEAR`, `description`) VALUES ('123', '987', 'yes', 'jack', '6 month', '0', 'N/A')
-19:10:42	INSERT INTO `project`.`course` (`C_ID`, `C_Student_id`, `registration`, `name`, `type`, `YEAR`, `description`) VALUES ('123', '654', 'yes', 'bob', '6 month', '0', 'has not paid fees')
-19:10:42	INSERT INTO `project`.`course` (`C_ID`, `C_Student_id`, `registration`, `name`, `type`, `YEAR`, `description`) VALUES ('456', '321', 'yes', 'mark', '12 month', '1', 'N/A')
-19:10:09	INSERT INTO `project`.`course` (`C_ID`, `C_Student_id`, `registration`, `name`, `type`, `YEAR`, `description`) VALUES ('science', '987', 'yes', 'jack', '6 month', '0', 'N/A')
-19:10:09	INSERT INTO `project`.`course` (`C_ID`, `C_Student_id`, `registration`, `name`, `type`, `YEAR`, `description`) VALUES ('science', '654', 'yes', 'bob', '6 month', '0', 'has not paid fees')
-19:10:09	INSERT INTO `project`.`course` (`C_ID`, `C_Student_id`, `registration`, `name`, `type`, `YEAR`, `description`) VALUES ('math', '321', 'yes', 'mark', '12 month', '1', 'N/A')
-19:07:56	SELECT * FROM project.course
-19:07:53	ALTER TABLE `project`.`course` 
+	INSERT INTO `project`.`course` (`C_ID`, `C_Student_id`, `registration`, `name`, `type`, `YEAR`, `description`) VALUES ('123', '987', 'yes', 'jack', '6 month', '0', 'N/A')
+	INSERT INTO `project`.`course` (`C_ID`, `C_Student_id`, `registration`, `name`, `type`, `YEAR`, `description`) VALUES ('456', '654', 'yes', 'bob', '6 month', '0', 'has not paid fees')
+	INSERT INTO `project`.`course` (`C_ID`, `C_Student_id`, `registration`, `name`, `type`, `YEAR`, `description`) VALUES ('789', '321', 'yes', 'mark', '12 month', '1', 'N/A')
+	INSERT INTO `project`.`course` (`C_ID`, `C_Student_id`, `registration`, `name`, `type`, `YEAR`, `description`) VALUES ('123', '987', 'yes', 'jack', '6 month', '0', 'N/A')
+	INSERT INTO `project`.`course` (`C_ID`, `C_Student_id`, `registration`, `name`, `type`, `YEAR`, `description`) VALUES ('123', '654', 'yes', 'bob', '6 month', '0', 'has not paid fees')
+	INSERT INTO `project`.`course` (`C_ID`, `C_Student_id`, `registration`, `name`, `type`, `YEAR`, `description`) VALUES ('456', '321', 'yes', 'mark', '12 month', '1', 'N/A')
+	INSERT INTO `project`.`course` (`C_ID`, `C_Student_id`, `registration`, `name`, `type`, `YEAR`, `description`) VALUES ('science', '987', 'yes', 'jack', '6 month', '0', 'N/A')
+	INSERT INTO `project`.`course` (`C_ID`, `C_Student_id`, `registration`, `name`, `type`, `YEAR`, `description`) VALUES ('science', '654', 'yes', 'bob', '6 month', '0', 'has not paid fees')
+	INSERT INTO `project`.`course` (`C_ID`, `C_Student_id`, `registration`, `name`, `type`, `YEAR`, `description`) VALUES ('math', '321', 'yes', 'mark', '12 month', '1', 'N/A')
+	SELECT * FROM project.course
+	ALTER TABLE `project`.`course` 
  DROP COLUMN `Coursecol`
-19:05:49	SELECT * FROM project.course
-19:05:40	CREATE TABLE `project`.`course` (
+	SELECT * FROM project.course
+	CREATE TABLE `project`.`course` (
    `C_ID` INT NOT NULL,
    `C_Student_id` VARCHAR(45) NOT NULL,
    `registration` VARCHAR(45) NOT NULL,
@@ -95,20 +95,20 @@
    `description` VARCHAR(45) NULL,
    `Coursecol` VARCHAR(45) NOT NULL,
    PRIMARY KEY (`C_ID`))
-19:01:36	SELECT * FROM project.teacher
-19:01:09	INSERT INTO `project`.`teacher` (`T_ID`, `College`, `Name`, `Mobile`, `Email`, `Username`, `Password`, `Address`) VALUES ('123', 'U of C', 'Aswad ', '4039099026', 'aswadt2@gmail.com', 'aswad123', 'aswd123', '230 37st NW')
-19:01:09	INSERT INTO `project`.`teacher` (`T_ID`, `College`, `Name`, `Mobile`, `Email`, `Username`, `Password`, `Address`) VALUES ('456', 'U of C', 'Morshed', '4038901234', 'morshed@gmail.com', 'morshed123', 'morshed123', '115 livingstone dr')
-18:59:21	SELECT * FROM project.teacher
-18:59:10	ALTER TABLE `project`.`teacher` 
+	SELECT * FROM project.teacher
+	INSERT INTO `project`.`teacher` (`T_ID`, `College`, `Name`, `Mobile`, `Email`, `Username`, `Password`, `Address`) VALUES ('123', 'U of C', 'Aswad ', '4039099026', 'aswadt2@gmail.com', 'aswad123', 'aswd123', '230 37st NW')
+	INSERT INTO `project`.`teacher` (`T_ID`, `College`, `Name`, `Mobile`, `Email`, `Username`, `Password`, `Address`) VALUES ('456', 'U of C', 'Morshed', '4038901234', 'morshed@gmail.com', 'morshed123', 'morshed123', '115 livingstone dr')
+	SELECT * FROM project.teacher
+	ALTER TABLE `project`.`teacher` 
  CHANGE COLUMN `Mobile` `Mobile` VARCHAR(10) NOT NULL
-18:57:41	INSERT INTO `project`.`teacher` (`T_ID`, `College`, `Name`, `Mobile`, `Email`, `Username`, `Password`, `Address`) VALUES ('123', 'U of C', 'Morshed', '4039099026', 'morshedulislam@gmail.com', 'morshed@uofc', 'morshed123', '115 blakesworth avenue')
-18:57:41	INSERT INTO `project`.`teacher` (`T_ID`, `College`, `Name`, `Mobile`, `Email`, `Username`, `Password`, `Address`) VALUES ('456', 'U of C', 'Hassan', '4039092893', 'hassan@UofC.ca', 'UofCHassan', 'Hassan123', '3812 livinston drive')
-18:57:41	INSERT INTO `project`.`teacher` (`T_ID`, `College`, `Name`, `Mobile`, `Email`, `Username`, `Password`, `Address`) VALUES ('789', 'U of C', 'aswad', '4035618654', 'aswadt2@gmail.com', 'AswadTaahsin', '123456', '230 37st NW ')
-18:56:30	INSERT INTO `project`.`teacher` (`T_ID`, `College`, `Name`, `Mobile`, `Email`, `Username`, `Password`, `Address`) VALUES ('123', 'U of C', 'Morshed', '403 909 9026', 'morshedulislam@gmail.com', 'morshed@uofc', 'morshed123', '115 blakesworth avenue')
-18:56:30	INSERT INTO `project`.`teacher` (`T_ID`, `College`, `Name`, `Mobile`, `Email`, `Username`, `Password`, `Address`) VALUES ('456', 'U of C', 'Hassan', '403 909 2893', 'hassan@UofC.ca', 'UofCHassan', 'Hassan123', '3812 livinston drive')
-18:56:30	INSERT INTO `project`.`teacher` (`T_ID`, `College`, `Name`, `Mobile`, `Email`, `Username`, `Password`, `Address`) VALUES ('789', 'U of C', 'aswad', '403 561 8654', 'aswadt2@gmail.com', 'AswadTaahsin', '123456', '230 37st NW ')
-18:38:13	SELECT * FROM project.teacher
-18:37:57	CREATE TABLE `project`.`teacher` (
+	INSERT INTO `project`.`teacher` (`T_ID`, `College`, `Name`, `Mobile`, `Email`, `Username`, `Password`, `Address`) VALUES ('123', 'U of C', 'Morshed', '4039099026', 'morshedulislam@gmail.com', 'morshed@uofc', 'morshed123', '115 blakesworth avenue')
+	INSERT INTO `project`.`teacher` (`T_ID`, `College`, `Name`, `Mobile`, `Email`, `Username`, `Password`, `Address`) VALUES ('456', 'U of C', 'Hassan', '4039092893', 'hassan@UofC.ca', 'UofCHassan', 'Hassan123', '3812 livinston drive')
+	INSERT INTO `project`.`teacher` (`T_ID`, `College`, `Name`, `Mobile`, `Email`, `Username`, `Password`, `Address`) VALUES ('789', 'U of C', 'aswad', '4035618654', 'aswadt2@gmail.com', 'AswadTaahsin', '123456', '230 37st NW ')
+	INSERT INTO `project`.`teacher` (`T_ID`, `College`, `Name`, `Mobile`, `Email`, `Username`, `Password`, `Address`) VALUES ('123', 'U of C', 'Morshed', '403 909 9026', 'morshedulislam@gmail.com', 'morshed@uofc', 'morshed123', '115 blakesworth avenue')
+	INSERT INTO `project`.`teacher` (`T_ID`, `College`, `Name`, `Mobile`, `Email`, `Username`, `Password`, `Address`) VALUES ('456', 'U of C', 'Hassan', '403 909 2893', 'hassan@UofC.ca', 'UofCHassan', 'Hassan123', '3812 livinston drive')
+	INSERT INTO `project`.`teacher` (`T_ID`, `College`, `Name`, `Mobile`, `Email`, `Username`, `Password`, `Address`) VALUES ('789', 'U of C', 'aswad', '403 561 8654', 'aswadt2@gmail.com', 'AswadTaahsin', '123456', '230 37st NW ')
+	SELECT * FROM project.teacher
+	CREATE TABLE `project`.`teacher` (
    `T_ID` INT NOT NULL,
    `College` VARCHAR(45) NOT NULL,
    `Name` VARCHAR(45) NOT NULL,
@@ -118,5 +118,5 @@
    `Password` VARCHAR(45) NOT NULL,
    `Address` VARCHAR(45) NOT NULL,
    PRIMARY KEY (`T_ID`))
-18:32:24	CREATE SCHEMA `project`
-18:30:59	SELECT * FROM sys.sys_config
+	CREATE SCHEMA `project`
+	SELECT * FROM sys.sys_config
